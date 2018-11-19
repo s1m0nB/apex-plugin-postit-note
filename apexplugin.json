@@ -1,0 +1,33 @@
+{
+  "name" : "APEX PostIt Note",
+  "version" : "1.0",
+  "description" : "The PostIt Note region plugIn will show a note in the style of a post-it or sticky note.",
+  "keywords" : ["note", "post-it", "region", "apex"],
+  "homepage" : "https://github.com/s1m0nB/apex-plugin-postit-note",
+  "bugs" : {
+    "url" : "https://github.com/s1m0nB/apex-plugin-postit-note/issues",
+    "email" : "simon.boorsma@gmail.com"
+  },
+  "license" : "MIT",
+  "author" : {
+    "name" : "Simon Boorsma",
+    "email" : "simon.boorsma@gmail.com",
+    "url" : "https://eocoe.blogspot.com/<todo>"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/s1m0nB/apex-plugin-postit-note"
+  },
+ "oracle" : {
+    "versions": ["11.2.0.1", "12.1.0.1", "12.2.0.1"],
+    "apex" : {
+      "versions" : ["18.1.0", "18.2.0"],
+      "plugin" : {
+        "internalName" : "APEXPOSTIT",
+        "type" : "region",
+        "demo" : "https://apex.oracle.com/pls/apex/f?p=35723:20",
+        "previewImage" : ""
+      }
+    }
+  }
+}
