@@ -56,9 +56,15 @@ wwv_flow_api.create_plugin(
 '        -- loop thruresult',
 '        for i in 1 .. l_sql_list(1).count',
 '        loop',
-'            l_note_text := sys.htf.escape_sc(l_sql_list(1)(i));',
-'            l_note_date := sys.htf.escape_sc(l_sql_list(2)(i));',
+'            l_note_text := l_sql_list(1)(i);',
+'            l_note_date := l_sql_list(2)(i);',
 '        end loop;',
+'    end if;',
+'    -- escape output if set',
+'    if p_region.escape_output',
+'    then',
+'        l_note_text := sys.htf.escape_sc(l_note_text);',
+'        l_note_date := sys.htf.escape_sc(l_note_date);',
 '    end if;',
 '    -- render the html',
 '    htp.prn(''<div class="apex-postit-container">'');',
@@ -70,6 +76,7 @@ wwv_flow_api.create_plugin(
 'end addPostItNoteRegion;'))
 ,p_api_version=>2
 ,p_render_function=>'addPostItNoteRegion'
+,p_standard_attributes=>'ESCAPE_OUTPUT'
 ,p_substitute_attributes=>true
 ,p_subscribe_plugin_settings=>true
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -79,7 +86,7 @@ wwv_flow_api.create_plugin(
 '  note-sql  - instead of static text, provide a sql statement for these to attributes (can''t contain html)'))
 ,p_version_identifier=>'1.0'
 ,p_about_url=>'https://github.com/s1m0nB/apex-plugin-postit-note'
-,p_files_version=>6
+,p_files_version=>8
 );
 wwv_flow_api.create_plugin_attribute(
  p_id=>wwv_flow_api.id(11136978764211734740)
@@ -128,7 +135,7 @@ end;
 /
 begin
 wwv_flow_api.g_varchar2_table := wwv_flow_api.empty_varchar2_table;
-wwv_flow_api.g_varchar2_table(1) := '2E617065782D706F737469742D6E6F7465207B0D0A2020636F6C6F723A20233333333B0D0A2020706F736974696F6E3A2072656C61746976653B0D0A202077696474683A203830253B0D0A20206D617267696E3A202D3230206175746F3B0D0A20207061';
+wwv_flow_api.g_varchar2_table(1) := '2E617065782D706F737469742D6E6F7465207B0D0A2020636F6C6F723A20233333333B0D0A2020706F736974696F6E3A2072656C61746976653B0D0A202077696474683A203830253B0D0A20206D617267696E2D746F703A20333070783B0D0A20207061';
 wwv_flow_api.g_varchar2_table(2) := '6464696E673A20313070783B0D0A2020666F6E742D66616D696C793A202748656C766574696361204E657565272C275365676F65205549272C48656C7665746963612C417269616C2C73616E732D73657269663B0D0A2020666F6E742D73697A653A2031';
 wwv_flow_api.g_varchar2_table(3) := '3470783B0D0A2020626F782D736861646F773A20302031307078203130707820327078207267626128302C302C302C302E33293B0D0A7D0D0A0D0A2E617065782D706F737469742D6E6F7465202E617065782D706F737469742D64617465207B0D0A2020';
 wwv_flow_api.g_varchar2_table(4) := '646973706C61793A20626C6F636B3B0D0A20206D617267696E3A20333070782030203020303B0D0A2020746578742D616C69676E3A2072696768743B0D0A2020666F6E742D73697A653A20313270783B0D0A2020666F6E742D7765696768743A20626F6C';
