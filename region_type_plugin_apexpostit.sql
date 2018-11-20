@@ -129,7 +129,7 @@ wwv_flow_api.create_plugin_attribute(
 'select ''Here you can put the text''      note_text',
 '     , to_char(sysdate,''dd month yyyy'') note_date',
 '  from dual'))
-,p_help_text=>'This attribute holds the sql statement for the data to be displayed in the post-it note. The SQL Statement can hold up to 2 columns for the note''s text and the dat of the note. Check below example for the format of the sql query.'
+,p_help_text=>'This attribute holds the sql statement for the data to be displayed in the post-it note. The SQL Statement can hold up to 2 columns for the note''s text and the date of the note. Check below example for the format of the sql query.'
 );
 end;
 /
