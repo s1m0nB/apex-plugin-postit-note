@@ -23,9 +23,15 @@ begin
         -- loop thruresult
         for i in 1 .. l_sql_list(1).count
         loop
-            l_note_text := sys.htf.escape_sc(l_sql_list(1)(i));
-            l_note_date := sys.htf.escape_sc(l_sql_list(2)(i));
+            l_note_text := l_sql_list(1)(i);
+            l_note_date := l_sql_list(2)(i);
         end loop;
+    end if;
+    -- escape output if set
+    if p_region.escape_output
+    then
+        l_note_text := sys.htf.escape_sc(l_note_text);
+        l_note_date := sys.htf.escape_sc(l_note_date);
     end if;
     -- render the html
     htp.prn('<div class="apex-postit-container">');
