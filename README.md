@@ -9,7 +9,7 @@ Download the latest PlugIn SQL File from this repository and import it in your A
 The region plugin has 3 (optional) attributes defined;
  * note-text - for static text assignement to the note (can include html)
  * note-date - displayed in right bottom of note, can also contain author or other information to highlight.
- * note-sql  - instead of static text, provide a sql statement for these to attributes (can't contain html)
+ * note-sql  - instead of static text, provide a sql statement for these two attributes (can't contain html)
 
 ## reference
 
