@@ -13,8 +13,8 @@ whenever sqlerror exit sql.sqlcode rollback
 --------------------------------------------------------------------------------
 begin
 wwv_flow_api.import_begin (
- p_version_yyyy_mm_dd=>'2018.05.24'
-,p_release=>'18.2.0.00.12'
+ p_version_yyyy_mm_dd=>'2016.01.01'
+,p_release=>'5.0.0'
 ,p_default_workspace_id=>12391180323004392729
 ,p_default_application_id=>35723
 ,p_default_owner=>'SB_DEV'
@@ -26,7 +26,7 @@ begin
 wwv_flow_api.create_plugin(
  p_id=>wwv_flow_api.id(11130142754716538353)
 ,p_plugin_type=>'REGION TYPE'
-,p_name=>'APEXPOSTIT'
+,p_name=>'SBA.APEX.POSTIT'
 ,p_display_name=>'PostItNote'
 ,p_supported_ui_types=>'DESKTOP'
 ,p_css_file_urls=>'#PLUGIN_FILES#apex-postit.css'
@@ -46,8 +46,8 @@ wwv_flow_api.create_plugin(
 '    l_result      apex_plugin.t_region_render_result;',
 'begin',
 '    -- detrmine data based on sql attribute',
-'    if l_note_text is null',
-'    and l_note_sql is not null',
+'    if  l_note_text is null',
+'    and l_note_sql  is not null',
 '    then',
 '        l_sql_list := apex_plugin_util.get_data ( p_sql_statement  => l_note_sql',
 '                                                , p_min_columns    => 1',
