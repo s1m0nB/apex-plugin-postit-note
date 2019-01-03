@@ -12,7 +12,7 @@
   "author" : {
     "name" : "Simon Boorsma",
     "email" : "simon.boorsma@gmail.com",
-    "url" : "https://eocoe.blogspot.com/<todo>"
+    "url" : "https://eocoe.blogspot.com/2019/01/a-post-it-note-region-plugin-for-apex.html"
   },
   "repository" : {
     "type" : "git",
@@ -26,7 +26,7 @@
         "internalName" : "SBA.APEX.POSTIT",
         "type" : "region",
         "demo" : "https://apex.oracle.com/pls/apex/f?p=35723:20",
-        "previewImage" : ""
+        "previewImage" : "https://3.bp.blogspot.com/-3SQMH6YiFGA/W_QOy807IlI/AAAAAAAAKNU/sR3PI_yv3bAIwH2x0epC02q55KJyVJbsgCLcBGAs/s1600/APEX_example-postit.png"
       }
     }
   }
