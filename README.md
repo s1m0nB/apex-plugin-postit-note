@@ -17,7 +17,7 @@ The plug-in also utilizes the 'Escape special characters' security attribute.
 
 https://apex.oracle.com/pls/apex/f?p=35723:20
 
-https://eocoe.blogspot.com/<todo>
+https://eocoe.blogspot.com/2019/01/a-post-it-note-region-plugin-for-apex.html
 
 http://creative-punch.net/2014/02/create-css3-post-it-note/
 
